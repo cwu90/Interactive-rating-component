@@ -84,15 +84,18 @@ main {
   width: 50px;
   color: var(--clr-neutral-two);
   font-family: var(--ff-primary);
+  color: var(--clr-neutral-one);
 }
 
 .btn:hover {
   background-color: var(--clr--submit);
+  color: var(--clr-neutral-two);
 }
 
 /* btn bg turns light grey when selected */
 .btn.select {
   background-color: var(--clr-button);
+  color: var(--clr-neutral-two);
 }
 
 #submit {

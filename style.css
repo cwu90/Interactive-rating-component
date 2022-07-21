@@ -1,0 +1,145 @@
+:root {
+  --clr-bg: hsl(216, 12%, 8%);
+  --clr-primary: hsl(213, 19%, 18%);
+  --clr-button-two: hsl(213, 20%, 28%);
+  --clr-button: hsl(216, 12%, 54%);
+  --clr-neutral-one: hsl(217, 12%, 63%);
+  --clr-neutral-two: hsl(0, 0%, 100%);
+  --clr--submit: hsl(25, 97%, 53%);
+  --ff-primary: 'Overpass', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-bg);
+}
+
+main {
+  height: 100vh;
+  position: relative;
+}
+.card {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-one);
+  max-width: 410px;
+  max-height: 420px;
+  border-radius: 30px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  padding: 32px;
+  text-align: center;
+}
+
+.star_box {
+  background-color: var(--clr-button-two);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star_box img {
+  width: 40%;
+}
+
+.card_title {
+  color: var(--clr-neutral-two);
+  font-weight: 700;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.feedback {
+  text-align: left;
+}
+
+.card_rate {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.btn {
+  background-color: var(--clr-button-two);
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: var(--clr-neutral-two);
+  font-family: var(--ff-primary);
+}
+
+.btn:hover {
+  background-color: var(--clr--submit);
+}
+
+/* btn bg turns light grey when selected */
+.btn.select {
+  background-color: var(--clr-button);
+}
+
+#submit {
+  background-color: var(--clr--submit);
+  border-radius: 35px;
+  border: none;
+  height: 50px;
+  width: 100%;
+  color: var(--clr-neutral-two);
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+}
+
+#submit:hover {
+  background-color: var(--clr-neutral-two);
+  color: var(--clr--submit);
+}
+
+/* .one {
+  display: none;
+} */
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  background-color: var(--clr-button-two);
+  padding-block: 6px;
+  border-radius: 30px;
+  color: var(--clr--submit);
+  display: block;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-block: 25px;
+}
+
+.thankyou_title {
+  color: var(--clr-neutral-two);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 15px;
+  }
+}

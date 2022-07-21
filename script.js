@@ -7,28 +7,33 @@ const reviewCard = document.querySelector('.one');
 const thankyouCard = document.querySelector('.two');
 
 
-let rating;
+(function () {
+  let rating;
+  ratingButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      const clickedRating = e.target;
+      rating = e.target.id;
 
-//When a ratingButton is clicked, change rating variable to that number
-ratingButtons.forEach(button => {
-  button.addEventListener('click', function (e) {
-    const clickedRating = e.target;
-    rating = e.target.id;
-
-    ratingButtons.forEach(button => {
-      button.classList.remove('select');
+      ratingButtons.forEach(button => {
+        button.classList.remove('select');
+      });
+      clickedRating.classList.toggle('select');
     });
-    clickedRating.classList.toggle('select');
   });
-});
 
-submitButtons.addEventListener('click', function (e) {
-  e.preventDefault();
+  submitButtons.addEventListener('click', function (e) {
+    //If no rating, return false
+    if (!rating) {
+      return false;
+    } else {
+      e.preventDefault();
 
-  selectedRating.innerText = `You selected ${rating} out of 5`;
+      selectedRating.innerText = `You selected ${rating} out of 5`;
 
-  reviewCard.classList.add('hidden');
-  thankyouCard.classList.remove('hidden');
-});
+      reviewCard.classList.add('hidden');
+      thankyouCard.classList.remove('hidden');
+    }
+  });
+})();
 
 

@@ -6,7 +6,7 @@ const selectedRating = document.querySelector('.selected');
 const reviewCard = document.querySelector('.one');
 const thankyouCard = document.querySelector('.two');
 
-//Set a variable that is set to the rating clicked
+
 let rating;
 
 //When a ratingButton is clicked, change rating variable to that number
@@ -31,6 +31,4 @@ submitButtons.addEventListener('click', function (e) {
   thankyouCard.classList.remove('hidden');
 });
 
-//Submit number and reviewCard gets hidden
 
-//thankyou card appears and select rating message HTML text change according to the rating number
